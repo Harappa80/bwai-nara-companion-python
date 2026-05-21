@@ -5,6 +5,7 @@ import asyncio
 import os
 
 app = Flask(__name__)
+app.json.ensure_ascii = False
 
 
 runner = None

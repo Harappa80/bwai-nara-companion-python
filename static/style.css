@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Noto Sans JP', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     margin: 0;
@@ -84,7 +84,7 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 0.8rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Noto Sans JP', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
     height: 50px;
 }
 
@@ -95,7 +95,7 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 0.8rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Noto Sans JP', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
     resize: none;
     height: 50px;
     line-height: 1.5;
