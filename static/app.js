@@ -87,25 +87,27 @@ document.addEventListener('DOMContentLoaded', () => {
             utterance.voice = selectedVoice;
         }
 
-        utterance.onstart = () => {
+        const startLipSync = () => {
+            clearInterval(lipSyncInterval);
             let mouthOpen = true;
+            characterImage.src = openMouthImg;
             lipSyncInterval = setInterval(() => {
                 characterImage.src = mouthOpen ? openMouthImg : closedMouthImg;
                 mouthOpen = !mouthOpen;
             }, 150);
         };
 
-        utterance.onend = () => {
+        const stopLipSync = () => {
             clearInterval(lipSyncInterval);
             characterImage.src = closedMouthImg;
         };
 
-        utterance.onerror = () => {
-            clearInterval(lipSyncInterval);
-            characterImage.src = closedMouthImg;
-        };
+        utterance.onstart = startLipSync;
+        utterance.onend = stopLipSync;
+        utterance.onerror = stopLipSync;
 
         speechSynthesis.speak(utterance);
+        startLipSync();
     };
 
     const handleSendMessage = async () => {
